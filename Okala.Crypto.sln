@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okala.Crypto.Api", "Okala.Crypto.Api\Okala.Crypto.Api.csproj", "{6DE0BD02-DB1C-4948-B097-C5852F849986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okala.Crypto.Domain", "Okala.Crypto.Domain\Okala.Crypto.Domain.csproj", "{5137EB74-7B35-4597-B721-7684FC3304AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okala.Crypto.Services", "Okala.Crypto.Services\Okala.Crypto.Services.csproj", "{4ECBB2A5-B9C9-4BF9-BDFD-BAB6236D9068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okala.Crypto.Utils", "Okala.Crypto.Utils\Okala.Crypto.Utils.csproj", "{2CCC2976-D39F-44C9-B9C5-CC0A66D75103}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DE0BD02-DB1C-4948-B097-C5852F849986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE0BD02-DB1C-4948-B097-C5852F849986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE0BD02-DB1C-4948-B097-C5852F849986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE0BD02-DB1C-4948-B097-C5852F849986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5137EB74-7B35-4597-B721-7684FC3304AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5137EB74-7B35-4597-B721-7684FC3304AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5137EB74-7B35-4597-B721-7684FC3304AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5137EB74-7B35-4597-B721-7684FC3304AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECBB2A5-B9C9-4BF9-BDFD-BAB6236D9068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECBB2A5-B9C9-4BF9-BDFD-BAB6236D9068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECBB2A5-B9C9-4BF9-BDFD-BAB6236D9068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECBB2A5-B9C9-4BF9-BDFD-BAB6236D9068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCC2976-D39F-44C9-B9C5-CC0A66D75103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCC2976-D39F-44C9-B9C5-CC0A66D75103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCC2976-D39F-44C9-B9C5-CC0A66D75103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCC2976-D39F-44C9-B9C5-CC0A66D75103}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

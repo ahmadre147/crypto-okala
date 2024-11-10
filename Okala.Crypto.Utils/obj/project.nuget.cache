@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nukoc/M5zZlTkWgKrXfrt8ZtoftZEacSuUneytLPafLqwRL3d0qUbaNQ98wJxz8T2o7lz6aZeCoPg9h7Np/QFA==",
+  "success": true,
+  "projectFilePath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj",
+  "expectedPackageFiles": [
+    "/home/ahmad/.nuget/packages/messagepack/2.5.187/messagepack.2.5.187.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/messagepack.annotations/2.5.187/messagepack.annotations.2.5.187.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/microsoft.net.stringtools/17.6.3/microsoft.net.stringtools.17.6.3.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/stackexchange.redis/2.8.16/stackexchange.redis.2.8.16.nupkg.sha512",
+    "/home/ahmad/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

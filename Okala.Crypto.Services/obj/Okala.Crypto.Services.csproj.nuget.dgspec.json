@@ -1,0 +1,212 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Services/Okala.Crypto.Services.csproj": {}
+  },
+  "projects": {
+    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
+        "projectName": "Okala.Crypto.Domain",
+        "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
+        "packagesPath": "/home/ahmad/.nuget/packages/",
+        "outputPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.zeero.ir/repository/zeero-nuget/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Services/Okala.Crypto.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Services/Okala.Crypto.Services.csproj",
+        "projectName": "Okala.Crypto.Services",
+        "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Services/Okala.Crypto.Services.csproj",
+        "packagesPath": "/home/ahmad/.nuget/packages/",
+        "outputPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.zeero.ir/repository/zeero-nuget/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {
+                "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj"
+              },
+              "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj": {
+                "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj",
+        "projectName": "Okala.Crypto.Utils",
+        "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/Okala.Crypto.Utils.csproj",
+        "packagesPath": "/home/ahmad/.nuget/packages/",
+        "outputPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Utils/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.zeero.ir/repository/zeero-nuget/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.5.187, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
