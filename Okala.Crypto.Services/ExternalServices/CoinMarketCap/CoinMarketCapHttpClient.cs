@@ -3,10 +3,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Okala.Crypto.Domain.Dtos;
 using Okala.Crypto.Domain.Dtos.ExternalServices.CoinMarketCap;
+using Okala.Crypto.Domain.Dtos.Quota;
+using Okala.Crypto.Domain.Services;
 
 namespace Okala.Crypto.Services.ExternalServices.CoinMarketCap;
 
-internal class CoinMarketCapHttpClient : ServiceBase
+internal class CoinMarketCapHttpClient : ServiceBase, IExternalExchangeService
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<CoinMarketCapHttpClient> _logger;
@@ -21,13 +23,7 @@ internal class CoinMarketCapHttpClient : ServiceBase
         _logger = logger;
     }
 
-    /// <summary>
-    /// Fetches exchange rates for the given cryptocurrency against specified currencies.
-    /// </summary>
-    /// <param name="cryptoCode">The cryptocurrency code (e.g., BTC).</param>
-    /// <param name="convertOption">The convert option (e.g., USD, EUR).</param>
-    /// <returns>A DTO with exchange rates for the cryptocurrency.</returns>
-    public async Task<CoinMarketCapResponseDto?> GetExchangeRatesAsync(string cryptoCode, string convertOption)
+    public async Task<PricePairDto?> GetExchangeRatesAsync(string cryptoCode, string convertOption)
     {
         try
         {
@@ -41,8 +37,16 @@ internal class CoinMarketCapHttpClient : ServiceBase
             }
 
             var listings = await response.Content.ReadFromJsonAsync<CoinMarketCapResponseDto>();
+
+            if (listings == null)
+            {
+                _logger.LogWarning("Failed to fetch deserialize response.");
+
+                return null;
+            }
+            
             _logger.LogInformation("Successfully fetched latest listings.");
-            return listings;
+            return new PricePairDto(convertOption, listings!.Data.FirstOrDefault().Value.Quote[convertOption].Price);
         }
         catch (Exception ex)
         {

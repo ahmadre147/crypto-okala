@@ -3,10 +3,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Okala.Crypto.Domain.Dtos;
 using Okala.Crypto.Domain.Dtos.ExternalServices.ExchangeRates;
+using Okala.Crypto.Domain.Dtos.Quota;
+using Okala.Crypto.Domain.Services;
 
 namespace Okala.Crypto.Services.ExternalServices.ExchangeRates;
 
-internal class ExchangeRatesHttpClient : ServiceBase
+internal class ExchangeRatesHttpClient : ServiceBase, IExternalExchangeService
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<ExchangeRatesHttpClient> _logger;
@@ -18,12 +20,7 @@ internal class ExchangeRatesHttpClient : ServiceBase
         _logger = logger;
     }
     
-    /// <summary>
-    /// Fetches exchange rates for the given cryptocurrency against specified currencies.
-    /// </summary>
-    /// <param name="cryptoCode">The cryptocurrency code (e.g., BTC).</param>
-    /// <returns>A DTO with exchange rates for the cryptocurrency.</returns>
-    public async Task<ExchangeRatesResponseDto?> GetExchangeRatesAsync(string cryptoCode)
+    public async Task<PricePairDto?> GetExchangeRatesAsync(string cryptoCode, string convertOption)
     {
         try
         {
@@ -40,10 +37,16 @@ internal class ExchangeRatesHttpClient : ServiceBase
             }
 
             var exchangeRates = await response.Content.ReadFromJsonAsync<ExchangeRatesResponseDto>();
-
-            _logger.LogInformation("Successfully fetched exchange rates for {}.", cryptoCode);
             
-            return exchangeRates;
+            if (exchangeRates == null)
+            {
+                _logger.LogWarning("Failed to fetch deserialize response.");
+
+                return null;
+            }
+            
+            _logger.LogInformation("Successfully fetched exchange rates for {}.", cryptoCode);
+            return new PricePairDto(convertOption, exchangeRates.Rates[convertOption]);
         }
         catch (Exception ex)
         {

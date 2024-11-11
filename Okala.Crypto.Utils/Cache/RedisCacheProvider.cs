@@ -3,51 +3,40 @@ using StackExchange.Redis;
 
 namespace Okala.Crypto.Utils.Cache;
 
-public class RedisCacheProvider<T>(IConnectionMultiplexer redis, TimeSpan commandTimeout) : ICacheLayer<T>
+public class RedisCacheProvider(IConnectionMultiplexer redis, TimeSpan commandTimeout) : ICacheProvider
 {
-    private readonly IDatabase _database = redis.GetDatabase();
+    private IDatabase Database => redis.GetDatabase();
 
-    public async Task<T?> GetValueAsync(int id, CancellationToken cancellationToken = default)
+    public async Task<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default)
     {
-        var key = id.ToString();
-        var data = await _database.StringGetAsync(key).WaitAsync(commandTimeout, cancellationToken);
+        var data = await Database.StringGetAsync(key).WaitAsync(commandTimeout, cancellationToken);
         return data.HasValue
             ? MessagePackSerializer.Deserialize<T>(data, cancellationToken: cancellationToken)
             : default;
     }
-
-    public T? GetValue(int id)
+    
+    public T? Get<T>(string key)
     {
-        var key = id.ToString();
-        var data = _database.StringGet(key);
+        var data = Database.StringGet(key);
         return data.HasValue
             ? MessagePackSerializer.Deserialize<T>(data)
             : default;
     }
-
-    public async Task SetAsync(int id, T value, TimeSpan? expiry = null, CancellationToken cancellationToken = default)
+    
+    public async Task SetAsync<T>(string key, T value, TimeSpan expiry, CancellationToken cancellationToken = default)
     {
-        var key = id.ToString();
         var data = MessagePackSerializer.Serialize(value, cancellationToken: cancellationToken);
-        await _database.StringSetAsync(key, data, expiry).WaitAsync(commandTimeout, cancellationToken);
+        await Database.StringSetAsync(key, data, expiry).WaitAsync(commandTimeout, cancellationToken);
     }
-
-    public void Set(int id, T value, TimeSpan? expiry = null)
+    
+    public void Set<T>(string key, T value, TimeSpan expiry)
     {
-        var key = id.ToString();
         var data = MessagePackSerializer.Serialize(value);
-        _database.StringSet(key, data, expiry);
+        Database.StringSet(key, data, expiry);
     }
-
-    public async Task RemoveAsync(int id, CancellationToken cancellationToken = default)
-    {
-        var key = id.ToString();
-        await _database.KeyDeleteAsync(key).WaitAsync(commandTimeout, cancellationToken);
-    }
-
-    public void Remove(int id)
-    {
-        var key = id.ToString();
-        _database.KeyDelete(key);
-    }
+    
+    public async Task DeleteAsync(string key, CancellationToken cancellationToken = default) =>
+        await Database.KeyDeleteAsync(key).WaitAsync(commandTimeout, cancellationToken);
+    
+    public void Delete(string key) => Database.KeyDelete(key);
 }

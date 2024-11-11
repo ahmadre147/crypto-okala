@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Okala.Crypto.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6e7f5e61bd6c5c5efa89d24f1b9aac5975d798f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Okala.Crypto.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Okala.Crypto.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
