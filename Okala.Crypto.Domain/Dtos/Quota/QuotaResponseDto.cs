@@ -1,5 +1,19 @@
+using System.Runtime.Serialization;
+
 namespace Okala.Crypto.Domain.Dtos.Quota;
 
-public class QuotaResponseDto(List<PricePairDto> Prices);
+[DataContract]
+public class QuotaResponseDto
+{
+    [DataMember]
+    public List<PricePairDto> Prices { get; set; }
+}
 
-public record PricePairDto(string Currency, decimal Value);
+[DataContract]
+public class PricePairDto
+{
+    [DataMember]
+    public string Currency { get; set; }
+    [DataMember]
+    public decimal Value { get; set; }
+}

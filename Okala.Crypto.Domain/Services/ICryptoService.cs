@@ -5,5 +5,5 @@ namespace Okala.Crypto.Domain.Services;
 
 public interface ICryptoService
 {
-    Task<ServiceResult<QuotaResponseDto?>> GetQuotaAsync(string symbol);
+    Task<ServiceResult<QuotaResponseDto>> GetQuotaAsync(string symbol);
 }

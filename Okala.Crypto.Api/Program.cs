@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 using Okala.Crypto.Domain.Dtos;
 using Okala.Crypto.Services;
+using Okala.Crypto.Utils.Cache;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +38,7 @@ builder.Services.AddServices();
 
 var redis = ConnectionMultiplexer.Connect(settings?.Redis.Url);
 builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
+builder.Services.AddSingleton<ICacheProvider>(new RedisCacheProvider(redis, TimeSpan.FromSeconds(10)));
 #endregion
 
 var app = builder.Build();

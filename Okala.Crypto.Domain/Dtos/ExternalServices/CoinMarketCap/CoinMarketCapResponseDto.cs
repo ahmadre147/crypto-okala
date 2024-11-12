@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace Okala.Crypto.Domain.Dtos.ExternalServices.CoinMarketCap;
 
-public class CoinMarketCapResponseDto
+public record CoinMarketCapResponseDto
 {
     [JsonPropertyName("status")]
     public StatusDto Status { get; set; }
@@ -11,7 +11,7 @@ public class CoinMarketCapResponseDto
     public Dictionary<string, CryptoDataDto> Data { get; set; }
 }
 
-public class CryptoDataDto
+public record CryptoDataDto
 {
     [JsonPropertyName("id")]
     public int Id { get; set; }
@@ -29,7 +29,7 @@ public class CryptoDataDto
     public Dictionary<string, CurrencyQuoteDto> Quote { get; set; }
 }
 
-public class CurrencyQuoteDto
+public record CurrencyQuoteDto
 {
     [JsonPropertyName("price")]
     public decimal Price { get; set; }
@@ -53,7 +53,7 @@ public class CurrencyQuoteDto
     public DateTime LastUpdated { get; set; }
 }
 
-public class StatusDto
+public record StatusDto
 {
     [JsonPropertyName("timestamp")]
     public DateTime Timestamp { get; set; }

@@ -2,5 +2,6 @@ namespace Okala.Crypto.Domain.Enumeration;
 
 public enum ErrorType
 {
-    UnknownError
+    UnknownError,
+    NotFound
 }
