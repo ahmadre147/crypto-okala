@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {}
+    "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {}
   },
   "projects": {
-    "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {
+    "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
+        "projectUniqueName": "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
         "projectName": "Okala.Crypto.Domain",
-        "projectPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
-        "packagesPath": "/home/ahmad/.nuget/packages/",
-        "outputPath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/obj/",
+        "projectPath": "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
+        "packagesPath": "/home/ahmadreza/.nuget/packages/",
+        "outputPath": "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ahmad/.nuget/NuGet/NuGet.Config"
+          "/home/ahmadreza/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nexus.zeero.ir/repository/zeero-nuget/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -49,12 +48,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.6, 8.0.6]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

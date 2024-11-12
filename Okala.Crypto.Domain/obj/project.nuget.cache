@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tE1s02ul6NyZ20ER/yFl/9KHOY7aW5CFepyJ0XkZcmp4RrJ+BSsAzOGkqCRwOilkM94P9HU/mAjMbCdN/Vriuw==",
+  "dgSpecHash": "9SbeTEeRB9qaba2Lclas+lS3NA/EWw4YuIRthTDcXrYcpICxt6WqRsSH6TZc/uYPAzlk4tlV7P5i4WK6Ke8dIw==",
   "success": true,
-  "projectFilePath": "/home/ahmad/RiderProjects/Okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/ahmadreza/RiderProjects/crypto-okala/Okala.Crypto.Domain/Okala.Crypto.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/ahmadreza/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.6/microsoft.aspnetcore.app.ref.8.0.6.nupkg.sha512"
+  ],
   "logs": []
 }
