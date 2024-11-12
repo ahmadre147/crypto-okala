@@ -26,6 +26,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Okala.Crypto.Domain\Okala.Crypto.Domain.csproj" />
+        <ProjectReference Include="..\Okala.Crypto.Services\Okala.Crypto.Services.csproj" />
         <ProjectReference Include="..\Okala.Crypto.Utils\Okala.Crypto.Utils.csproj" />
     </ItemGroup>
 
